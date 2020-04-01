@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paragoz.Model.Kategoriler" Title="Kategoriler">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary"
+                     Text="Sınır Değer Kontrol"
+                     Priority="1"
+                     Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" Margin="5" BorderColor="Black">
+                <StackLayout>
+                    <ListView x:Name="lstKategori" SeparatorColor="Black" SeparatorVisibility="Default">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell  Text="{Binding KategoriAdi}" TextColor="Black"  Detail="{Binding SinirDegeri}" DetailColor="Red">
+
+                                    <TextCell.ContextActions>
+                                        
+                                        <MenuItem Text="Sil" Clicked="MenuItem_Clicked_Delete" IsDestructive="True" CommandParameter="{Binding .}"/>
+                                    </TextCell.ContextActions>
+                                </TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="1" Margin="5" BorderColor="Black">
+                <StackLayout>
+                    <Entry x:Name="kategoriAdi" Placeholder="Kategori adı giriniz"></Entry>
+                    <Entry x:Name="maxmiktar" Placeholder="Maxsimum harcama miktarı giriniz" Keyboard="Numeric"></Entry>
+                    <Button CornerRadius="20" TextColor="Black" FontAttributes="Bold" BackgroundColor="DarkGray" Text="Ekle" Clicked="Button_Clicked" ></Button>
+                </StackLayout>
+            </Frame>
+            
+        </Grid>
+        
+        
+
+    </ContentPage.Content>
+</ContentPage>

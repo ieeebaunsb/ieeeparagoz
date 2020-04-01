@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paragoz.Model.Harcamalar"
+             Title="Gelir-Gider">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" Margin="10" BorderColor="Black">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Gider Ekle"></Label>
+                        <Button BackgroundColor="DarkGray" CornerRadius="20" Text="Yenile" HorizontalOptions="EndAndExpand" FontSize="Micro"  Clicked="Button_Clicked_Refresh"></Button>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <DatePicker x:Name="takvim" HorizontalOptions="StartAndExpand"></DatePicker>
+                        <Entry x:Name="harcamamiktarı" HorizontalOptions="CenterAndExpand" Placeholder="Miktar" Keyboard="Numeric"></Entry>
+                        <Picker x:Name="cuzdan" Title="Cüzdan" >
+                            <Picker.Items>
+
+                            </Picker.Items>
+                        </Picker>
+                        <Picker x:Name="kategori" FontSize="Small" HorizontalOptions="EndAndExpand" Title="Kategori" >
+                            <Picker.Items>
+
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="aciklama" Placeholder="Açıklama (opsiyonel)"></Entry>
+                        <Button BackgroundColor="DarkGray" CornerRadius="20" Text="Ekle" HorizontalOptions="EndAndExpand" FontSize="Small" Clicked="Button_Clicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Black" Margin="10" Grid.Row="1">
+                <StackLayout>
+                    <Label Text="Gelir Ekle"></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <!--<DatePicker x:Name="takvimgelir"></DatePicker> kaldırıldı belki sonra eklenir-->
+                        <Entry x:Name="gelirmiktar" Placeholder="Miktarı Girin" Keyboard="Numeric"></Entry>
+                        <Picker x:Name="cuzdangelir"  FontSize="Small"
+                Title="Cüzdan Seç" >
+                            <Picker.Items>
+
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <!--<Label Text="Düzenli gelir olarak eklensin mi?" ></Label>
+                        <Switch x:Name="Duzen" IsToggled="False" ></Switch> ileriki sürümlerde eklenir.-->
+                        <Button HorizontalOptions="End" BackgroundColor="DarkGray"  CornerRadius="20" Text="Kaydet" Clicked="Button_Clicked_Gelir"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paragoz.Model.Gelir" Title="Gelir">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame BorderColor="Black" Margin="10" Grid.Row="0">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <DatePicker x:Name="takvim"></DatePicker>
+                        <Entry x:Name="gelirmiktar" Placeholder="Miktarı Girin" Keyboard="Numeric"></Entry>
+                        <Picker x:Name="cuzdan"  FontSize="Small"
+                Title="Cüzdan Seç" >
+                            <Picker.Items>
+
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Düzenli gelir olarak eklensin mi?" ></Label>
+                        <Switch x:Name="Duzen" IsToggled="False" ></Switch>
+                        <Button HorizontalOptions="End" BackgroundColor="DarkGray"  CornerRadius="20" Text="Kaydet" Clicked="Button_Clicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

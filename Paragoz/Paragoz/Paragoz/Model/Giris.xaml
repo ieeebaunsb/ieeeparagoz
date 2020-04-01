@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paragoz.Model.Giris" Title="Giriş" >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="MERHABA!" TextColor="Black" FontSize="50" FontAttributes="Bold" FontFamily="" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+            <Label Grid.Row="1" Text="Hoşgeldiniz. Lütfen giriş yapınız." TextColor="Black" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start"/>
+            <Image Grid.Row="2" Source="login.png" />
+            <Frame Grid.Row="3">
+                <StackLayout Orientation="Vertical">
+                    <Entry x:Name="kullaniciAdi" Placeholder="Kullanıcı Adı"></Entry>
+                    <Entry x:Name="password" Placeholder="Şifre Giriniz" IsPassword="True"></Entry>
+                    <Button CornerRadius="20" Text="Giriş Yap" BackgroundColor="DarkGreen" TextColor="White" Clicked="Button_Clicked" ></Button>
+                    <Label Text=" Hesabın Yok mu ?" HorizontalOptions="Center"></Label>
+                    <Button CornerRadius="20" Text="Yeni Hesap Oluştur" BackgroundColor="Red" TextColor="White" Clicked="Button_Clicked_1"></Button>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

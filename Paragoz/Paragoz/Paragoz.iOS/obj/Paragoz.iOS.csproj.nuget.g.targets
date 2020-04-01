@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xamarin.forms\4.4.0.991640\build\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\4.4.0.991640\build\Xamarin.Forms.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.build.download\0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.build.download\0.4.11\build\Xamarin.Build.Download.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.instanceid\1.0.9\build\Xamarin.Firebase.iOS.InstanceID.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.instanceid\1.0.9\build\Xamarin.Firebase.iOS.InstanceID.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.core\6.1.0.1\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.core\6.1.0.1\build\Xamarin.Firebase.iOS.Core.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.analytics\3.7.0\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.analytics\3.7.0\build\Xamarin.Firebase.iOS.Analytics.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.database\3.1.2\build\Xamarin.Firebase.iOS.Database.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.database\3.1.2\build\Xamarin.Firebase.iOS.Database.targets')" />
+  </ImportGroup>
+</Project>

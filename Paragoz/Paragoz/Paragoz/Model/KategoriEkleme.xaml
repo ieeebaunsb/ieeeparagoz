@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paragoz.Model.KategoriEkleme" Title="KategoriEkleme">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" Margin="5" BorderColor="Black">
+                <StackLayout>
+                    <Entry x:Name="kategoriAdi" Placeholder="Kategori adı giriniz"></Entry>
+                    <Entry x:Name="maxmiktar" Placeholder="Maxsimum harcama miktarı giriniz" Keyboard="Numeric"></Entry>
+                    <Button CornerRadius="20" TextColor="Black" FontAttributes="Bold" BackgroundColor="DarkGray" Text="Ekle" Clicked="Button_Clicked" ></Button>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

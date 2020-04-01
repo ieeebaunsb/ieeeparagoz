@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paragoz.Model.Kayit">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame>
+                <Label Text="Lütfen Boşlukları Eksiksiz Doldurun" TextColor="Black" FontSize="30" FontAttributes="Bold" FontFamily="" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+            </Frame>
+            <Frame Grid.Row="1" Margin="20" BorderColor="Black" Padding="20,20,20,20">
+                <StackLayout>
+                    <Entry x:Name="mail" Placeholder="E-Mail Adresinizi Girin"></Entry>
+                    <Entry x:Name="password" Placeholder="Şifre Giriniz" IsPassword="True"></Entry>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="ad" Placeholder="Adınızı Girin"></Entry>
+                        <Entry x:Name="soyad" Placeholder="Soyadınızı Girin"></Entry>
+                    </StackLayout>
+                    <Button CornerRadius="20" BackgroundColor="DarkGray" Text="Tamamla" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

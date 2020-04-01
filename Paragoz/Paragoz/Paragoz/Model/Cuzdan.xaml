@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paragoz.Model.Cuzdan" Title="Cuzdan">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame BorderColor="Black" Margin="10" Grid.Row="0">
+                <StackLayout>
+                    <Entry x:Name="cuzdanAdi" Placeholder="Cüzdan Adınızı Girin"></Entry>
+                    <Entry x:Name="miktar" Placeholder="Başlangıç Miktarınızı Girin" Keyboard="Numeric"></Entry>
+                    <Button CornerRadius="20" BackgroundColor="DarkGray" Text="Ekle" Clicked="Button_Clicked" ></Button>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Black" Margin="10" Grid.Row="1">
+                <StackLayout >
+
+                    <Label Text="Sahip Olduğunuz Cüzdanlar" HorizontalOptions="Center" TextColor="Black" FontSize="Medium" ></Label>
+                    <ListView x:Name="lstCuzdan" SeparatorVisibility="Default" SeparatorColor="Black">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding CuzdanAdi}" Detail="{Binding CuzdanPara}" TextColor="Black" DetailColor="Green">
+                                    <TextCell.ContextActions>
+
+                                        
+                                        <MenuItem Text="Sil" Clicked="MenuItem_Clicked_Delete"  IsDestructive="True" CommandParameter="{Binding .}"/>
+                                    </TextCell.ContextActions>
+                                   
+
+                                </TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
